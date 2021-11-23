@@ -15,17 +15,21 @@ public class HashMapClass implements All{
     }
 
     @Override
-    public void deleting() {
+    public void deleting(String deleter) {
         System.out.println("Podaj unikalny klucz elementu, który chcesz usunąć");
         Scanner scanner = new Scanner(System.in);
         Integer y = scanner.nextInt();
-       // System.out.println("Podaj nazwę elementu, który chcesz usunąć");
-        //String deleter = scanner.next();
         hashm.remove(y);
     }
 
     @Override
     public void show() {
         System.out.println(hashm.clone());
+    }
+
+    @Override
+    public void info() {
+        System.out.println("W kolekcji HashMap można dodać identyczne elementy, jednak trzeba im przypisać inny klucz");
+        System.out.println("Kolekcja ta zapisuje elementy w kolejności podawanej przez klucze.");
     }
 }

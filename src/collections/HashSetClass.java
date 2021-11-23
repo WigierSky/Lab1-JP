@@ -12,16 +12,19 @@ public class HashSetClass implements All {
     }
 
     @Override
-    public void deleting() {
-        System.out.println("Podaj element, który chcesz usunąć");
-        Scanner scanner = new Scanner(System.in);
-        String deleter = scanner.next();
+    public void deleting(String deleter) {
         hashs.remove(deleter);
     }
 
     @Override
     public void show() {
         System.out.println(hashs.clone());
+    }
+
+    @Override
+    public void info() {
+        System.out.println("W kolekcji HashSet nie można dodać identycznych elementów");
+        System.out.println("Kolekcja ta nie zapisuje elementów w żadnej kolejności");
     }
 }
 
