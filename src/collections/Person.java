@@ -25,18 +25,6 @@ public class Person implements Comparable<Person> {
            this.age = age;
        }
 
-    public int getAge() {
-        return age;
-    }
-
-    public String getFirst_name() {
-        return first_name;
-    }
-
-    public String getLast_name() {
-        return last_name;
-    }
-
     public String fullname() {
         return first_name + " " + last_name + " " + age + " " + "lat";
     }

@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class HashMapClass implements All{
 
-    HashMap<Integer, Person> hashm = new HashMap();
+    HashMap<Integer, Person> hashm = new HashMap<>();
     @Override
     public void adding(Person addon) {
         System.out.println("Podaj unikalny klucz, który zostanie przypisany do elementu który chcesz dodać");

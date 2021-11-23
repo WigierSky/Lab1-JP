@@ -1,6 +1,5 @@
 package collections;
 
-import java.util.Collections;
 import java.util.Scanner;
 
 public class main {

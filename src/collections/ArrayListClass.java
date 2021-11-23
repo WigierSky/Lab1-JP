@@ -2,10 +2,9 @@ package collections;
 
 import java.util.ArrayList;
 import java.util.Iterator;
-import java.util.Scanner;
 
 public class ArrayListClass implements All {
-    ArrayList<Person> array = new ArrayList();
+    ArrayList<Person> array = new ArrayList<>();
 
     @Override
     public void adding(Person addon) {

@@ -2,7 +2,6 @@ package collections;
 
 import java.util.Iterator;
 import java.util.LinkedList;
-import java.util.Scanner;
 
 public class LinkedListClass implements All {
     LinkedList<Person> linked = new LinkedList<>();
