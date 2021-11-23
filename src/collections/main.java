@@ -7,6 +7,7 @@ public class main {
     public static void main(String[] args) {
         menu();
     }
+
 private static void menu(){
     Scanner scanner = new Scanner(System.in);
 
@@ -34,7 +35,9 @@ private static void menu(){
         case 4:
             actions(new LinkedListClass());
         case 5:
+            actions(new TreeSetClass());
         case 6:
+            actions(new TreeMapClass());
         case 0: {
             System.exit(0);
         }
