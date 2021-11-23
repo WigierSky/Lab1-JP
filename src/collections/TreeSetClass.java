@@ -1,23 +1,29 @@
 package collections;
 
+import java.util.Iterator;
 import java.util.TreeSet;
 
 public class TreeSetClass implements All {
-    TreeSet<String> tree = new TreeSet<>();
+    TreeSet<Person> trees = new TreeSet<>();
 
     @Override
-    public void adding(String addon) {
-        tree.add(addon);
+    public void adding(Person addon) {
+        trees.add(addon);
     }
 
     @Override
-    public void deleting(String deleter) {
-        tree.remove(deleter);
+    public void deleting(Person deleter) {
+        trees.removeIf(str -> str.fullname().equals(deleter.fullname()));
     }
 
     @Override
     public void show() {
-        System.out.println(tree.clone());
+        Iterator<Person> i = trees.iterator();
+        while(i.hasNext())
+        {
+            System.out.println(i.next().fullname());
+        }
+
     }
 
     @Override

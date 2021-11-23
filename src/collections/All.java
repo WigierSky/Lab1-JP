@@ -1,8 +1,8 @@
 package collections;
 
 public interface All {
-    void adding(String addon);
-    void deleting(String deleter);
+    void adding(Person person);
+    void deleting(Person person);
     void show();
     void info();
 }

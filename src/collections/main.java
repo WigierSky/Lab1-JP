@@ -58,16 +58,26 @@ public static void actions(All collection){
 
         switch (y) {
             case 1: {
-                System.out.println("Podaj element, który chcesz dodać");
-                String string = scanner.next();
-                collection.adding(string);
+                System.out.println("Podaj imie");
+                String name = scanner.next();
+                System.out.println("Podaj nazwisko");
+                String surname = scanner.next();
+                System.out.println("Podaj wiek");
+                int age = scanner.nextInt();
+                Person person = new Person(name, surname, age);
+                collection.adding(person);
                 break;
             }
 
             case 2:{
-                System.out.println("Podaj element który chcesz usunąć");
-                String string = scanner.next();
-                collection.deleting(string);
+                System.out.println("Podaj imie");
+                String name = scanner.next();
+                System.out.println("Podaj nazwisko");
+                String surname = scanner.next();
+                System.out.println("Podaj wiek");
+                int age = scanner.nextInt();
+                Person person = new Person(name, surname, age);
+                collection.deleting(person);
                 break;
             }
 
@@ -78,10 +88,12 @@ public static void actions(All collection){
 
             case 4: {
                 collection.info();
+                break;
             }
 
             case 5: {
                 menu();
+                break;
             }
             case 0:{
                 System.exit(0);

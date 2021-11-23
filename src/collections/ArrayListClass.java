@@ -1,24 +1,30 @@
 package collections;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.Scanner;
 
 public class ArrayListClass implements All {
-    ArrayList<String> array = new ArrayList();
+    ArrayList<Person> array = new ArrayList();
 
     @Override
-    public void adding(String addon) {
+    public void adding(Person addon) {
        array.add(addon);
     }
 
     @Override
-    public void deleting(String deleter) {
-        array.remove(deleter);
+    public void deleting(Person deleter) {
+        array.removeIf(str -> str.fullname().equals(deleter.fullname()));
     }
 
     @Override
     public void show() {
-        System.out.println(array.clone());
+        Iterator<Person> i = array.iterator();
+        while(i.hasNext())
+        {
+            System.out.println(i.next().fullname());
+        }
+
     }
 
     @Override

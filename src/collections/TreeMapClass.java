@@ -1,22 +1,23 @@
 package collections;
 
+import java.util.Iterator;
 import java.util.Scanner;
 import java.util.TreeMap;
 
 public class TreeMapClass implements All{
-    TreeMap<Integer, String> treem = new TreeMap<>();
+    TreeMap<Integer, Person> treem = new TreeMap<>();
 
     @Override
-    public void adding(String addon) {
-        System.out.println("Podaj klucz elementu który chcesz dodać");
+    public void adding(Person addon) {
+        System.out.println("Podaj unikalny klucz elementu który chcesz dodać");
         Scanner scanner = new Scanner(System.in);
         int x = scanner.nextInt();
         treem.put(x, addon);
     }
 
     @Override
-    public void deleting(String deleter) {
-        System.out.println("Podaj klucz elementu który chcesz usunąć");
+    public void deleting(Person deleter) {
+        System.out.println("Podaj unikalny klucz elementu który chcesz usunąć");
         Scanner scanner = new Scanner(System.in);
         int x = scanner.nextInt();
         treem.remove(x);
@@ -24,7 +25,12 @@ public class TreeMapClass implements All{
 
     @Override
     public void show() {
-        System.out.println(treem.clone());
+        Iterator<Person> i = treem.values().iterator();
+        while(i.hasNext())
+        {
+            System.out.println(i.next().fullname());
+        }
+
     }
 
     @Override

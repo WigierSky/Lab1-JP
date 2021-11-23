@@ -1,24 +1,32 @@
 package collections;
 
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.Scanner;
 
 public class HashSetClass implements All {
-    HashSet<String> hashs = new HashSet<>();
+    HashSet<Person> hashs = new HashSet<>();
 
     @Override
-    public void adding(String addon) {
+    public void adding(Person addon) {
         hashs.add(addon);
     }
 
     @Override
-    public void deleting(String deleter) {
-        hashs.remove(deleter);
+    public void deleting(Person deleter) {
+
+        hashs.removeIf(str -> str.fullname().equals(deleter.fullname()));
+
     }
 
     @Override
     public void show() {
-        System.out.println(hashs.clone());
+        Iterator<Person> i = hashs.iterator();
+       while(i.hasNext())
+       {
+           System.out.println(i.next().fullname());
+       }
+
     }
 
     @Override

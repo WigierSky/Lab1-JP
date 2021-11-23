@@ -1,24 +1,30 @@
 package collections;
 
+import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.Scanner;
 
 public class LinkedListClass implements All {
-    LinkedList<String> linked = new LinkedList<>();
+    LinkedList<Person> linked = new LinkedList<>();
 
     @Override
-    public void adding(String addon) {
-        linked.add(addon);
+    public void adding(Person person) {
+        linked.add(person);
     }
 
     @Override
-    public void deleting(String deleter) {
-        linked.remove(deleter);
+    public void deleting(Person deleter) {
+        linked.removeIf(str -> str.fullname().equals(deleter.fullname()));
     }
 
     @Override
     public void show() {
-        System.out.println(linked.clone());
+        Iterator<Person> i = linked.iterator();
+        while(i.hasNext())
+        {
+            System.out.println(i.next().fullname());
+        }
+
     }
 
     @Override
