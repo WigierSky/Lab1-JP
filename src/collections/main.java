@@ -46,6 +46,7 @@ private static void menu(){
 public static void actions(All collection){
     Scanner scanner = new Scanner(System.in);
     while(true) {
+        System.out.println("------------------------");
         System.out.println("Co chcesz zrobić?");
         System.out.println("1. Dodaj do kolekcji");
         System.out.println("2. Usuń z kolekcji");
@@ -53,6 +54,7 @@ public static void actions(All collection){
         System.out.println("4. Informacje o kolekcji");
         System.out.println("5. Zmień kolekcję");
         System.out.println("0. Wyjdź");
+        System.out.println("------------------------");
         int y = scanner.nextInt();
 
         switch (y) {
